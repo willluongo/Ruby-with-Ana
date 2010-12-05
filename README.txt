@@ -16,9 +16,7 @@ I introduced the rand() method, which lead directly to our next endeavour:
 
 I told her that I needed a function that would pick two random numbers, and then ask the player for the product. A little over an hour later, she came up with what you see here, except the elsif, which I added to show her how we could make the computer seem quite smart, with only a little effort on our part.
 
-
-
-
+12/5/2010: Today we fleshed out the mathgame a bit more, and added some functionality. I helped her with the division (using a modulus operator to make sure no remainders will be required) and the subtraction (she was trying to use a series of conditionals to make the second number smaller). She is becoming fairly comfortable with the idea of methods/functions and conditionals.
 
 
 
