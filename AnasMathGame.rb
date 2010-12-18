@@ -77,3 +77,35 @@ def answer_check(guess, correct)
     puts "Great effort, but try harder next time.The answer was #{correct}."
   end
 end
+
+def operation(type)
+  first_number = rand(100)+1
+  if type == :division
+    second_number = rand(first_number)+1
+    until first_number%second_number == 0
+      second_number = rand(first_number)+1
+    end
+  else
+    second_number = rand(100)+1
+  end
+  
+  case type
+  when :division
+    correct = first_number / second_number
+    result = "quotient"
+  when :multiplication
+    correct = first_number * second_number
+    result = "product"
+  when :subtraction
+    correct = first_number - second_number
+    result = "difference"
+  when :addition
+    correct = first_number + second_number
+    result = "sum"
+  else
+    puts "Invalid Parameter"
+  end
+  
+  puts "Please find the #{result} of #{first_number} and #{second_number}."
+  answer_check(gets.chomp.to_i, correct)
+end

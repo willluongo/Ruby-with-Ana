@@ -1,0 +1,19 @@
+Ana's solo project #1 - The Game of Poops
+
+Poops is one of the easiest dice games to learn.
+
+A player (the shooter) rolls two six sided dice. If the first roll is a 7 or 11, they win! If the first roll is a 2, 3, or 12, they "poop out" and lose! If they roll anything else, then they will continue to roll until they either roll the same number they first rolled (the "point") to win, or roll a 7 to lose. That's it.
+
+How should you write it?
+
+You will want to use DRY development. Remember what that is?
+
+Make a die object. This object should take a single argument to define the number of sides. When the roll method is called, the die should pick a random number from 1 through the number of sides.
+
+For each turn of the game, the shooter should roll two dice. They should be the same dice every roll, just new rolls.
+
+Check the first roll. Either the player will win, or lose, or you will need to save the point so you can check later rolls to see if it matches.
+
+If the second (or later) rolls match the point, the player wins. If the second or later roll is a seven, the player loses. Otherwise, the player rolls again.
+
+Bonus points: Put your dice definitions in a separate file so you can re-use them later.
