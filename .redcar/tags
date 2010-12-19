@@ -1,0 +1,24 @@
+1292778109
+Animal	/home/ana/Ruby-with-Ana/Modules/animals.rb	class Animal
+Cat	/home/ana/Ruby-with-Ana/Modules/animals.rb	class Cat 
+Die	/home/ana/Ruby-with-Ana/Poops.rb	class Die
+Dog	/home/ana/Ruby-with-Ana/Modules/animals.rb	class Dog 
+Rabbit	/home/ana/Ruby-with-Ana/Modules/animals.rb	class Rabbit 
+addition	/home/ana/Ruby-with-Ana/AnasMathGame.rb	def addition
+age	/home/ana/Ruby-with-Ana/Modules/animals.rb	  attr_accessor :age, :height, :weight, :color, :breed
+answer_check	/home/ana/Ruby-with-Ana/AnasMathGame.rb	def answer_check(guess, correct)
+bark	/home/ana/Ruby-with-Ana/Modules/animals.rb	  def bark
+breed	/home/ana/Ruby-with-Ana/Modules/animals.rb	  attr_accessor :age, :height, :weight, :color, :breed
+color	/home/ana/Ruby-with-Ana/Modules/animals.rb	  attr_accessor :age, :height, :weight, :color, :breed
+division	/home/ana/Ruby-with-Ana/AnasMathGame.rb	def division
+height	/home/ana/Ruby-with-Ana/Modules/animals.rb	  attr_accessor :age, :height, :weight, :color, :breed
+initialize	/home/ana/Ruby-with-Ana/Modules/animals.rb	  def initialize(age, height, weight, color, breed)
+initialize	/home/ana/Ruby-with-Ana/Poops.rb	  def initialize(sides)
+meow	/home/ana/Ruby-with-Ana/Modules/animals.rb	  def meow
+multiplication	/home/ana/Ruby-with-Ana/AnasMathGame.rb	def multiplication
+operation	/home/ana/Ruby-with-Ana/AnasMathGame.rb	def operation(type)
+prompt_player	/home/ana/Ruby-with-Ana/MadLibs.rb	def prompt_player(requested)
+roll	/home/ana/Ruby-with-Ana/Poops.rb	  def roll
+subtraction	/home/ana/Ruby-with-Ana/AnasMathGame.rb	def subtraction
+total	/home/ana/Ruby-with-Ana/Poops.rb	def total
+weight	/home/ana/Ruby-with-Ana/Modules/animals.rb	  attr_accessor :age, :height, :weight, :color, :breed
