@@ -1,0 +1,37 @@
+Create a file called objects.rb, and in this file create the following:
+
+A present object. A present should accept two arguments when created. The arguments will be the color of the present and the contents of the present. Both should be strings. 
+
+The present object should have two methods, describe and unwrap. 
+
+The describe method should print a message like the following when called for a present object with the color "blue":
+
+The present is wrapped in shiny blue paper.
+
+The unwrap method would print a message like the following when called for a present object with the contents "a book":
+
+You unwrap the present to discover what you have been wanting all year... a book!
+
+In another new file, called christmas.rb:
+
+Require the objects.rb file.
+
+Instantiate a new present object with a name of your choice. This present should be wrapped in purple wrapping paper, and contain a DVD.
+
+You know what would be cool? Shaking the present for a hint.
+
+Go back to objects.rb and add a shake method for the present object. When called on a present object with the hint "It rattles like a rattle snake." the output should look like the following:
+
+It rattles like a rattle snake.
+
+Also, we need to add an argument to the initialized method, hint. Hint should be a string describing the hint you get when the present gets shaken.
+
+Now let's go back to our christmas.rb and make a hint for our DVD.
+
+In christmas.rb, use each method of your new present object at least once.
+
+You should now have two files, and when you run
+
+ruby christmas.rb
+
+You should see the output of each method of a present object.

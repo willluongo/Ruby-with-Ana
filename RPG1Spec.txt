@@ -1,0 +1,23 @@
+Create an object class called monster. A monster should take the following arguments when initialized:
+
+name, hit points, attack points
+
+Hit points and attack points are attributes that need to be accessible from outside the object.
+
+A monster should have three methods: attack, defend and die.
+
+The attack method should take a single argument, target. The attack method then picks a random number from 0 through attack points, and passes that as an argument to the target's defend method. 
+
+The defend method should take a single argument, damage. Damage is an integer that should be subtracted from the monster's hit points. If hit points go below zero, call the die method. Display a message indicating how much damage was done, and how many hitpoints remain.
+
+The die method should take no arguments. When called, it should display an exciting death message of your choice, for example:
+
+The one eyed falgoon spins dramatically to the ground, clutching his right ear in agony.
+
+Then, inherit everything from the monster class, into a new class we'll call player.
+
+Instantiate a new player object with your name, 20 hit points, and 5 attack points.
+
+Instantiate a new monster object with the name "Charred Chronomander", 25 hit points, and 3 attack points.
+
+Have them fight, and see who wins.
