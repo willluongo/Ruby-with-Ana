@@ -4,6 +4,7 @@ class Monster
     @name = name 
     @hit_points = hit_points 
     @attack_points = attack_points
+    @death_messages = ["The #{@name} slowly falls to the ground, writhing in agony.", "You look in awe as the #{@name} bursts into flames, and the ashes fly away with the wind.", "The #{@name} beast falls to the ground with a thud and slowly dies in agony. #{@name} is in a better place.", "The #{@name} shrieks its last words, \"CURSE YOU!\", and dies.]
   end
 
   def attack(target)
@@ -21,7 +22,7 @@ class Monster
 
 
   def die
-    puts "The #{@name} beast falls to the ground with a thud and slowly dies in agony. #{@name} is in a better place."
+    puts @death_messages[rand(@death_messages.length)]
   end
 
 end
