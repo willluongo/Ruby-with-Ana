@@ -9,6 +9,14 @@ class Player
 		@level = level
 		@gold = gold
 	end
+	
+	def attack(target)
+		target.defend(rand((@weapon + 1)*6), self.name)
+	end
+	def defend(damage, attacker)
+		block = rand(@armor * 4)
+		puts "The #{attacker} attacks #{self.name} for #{damage}, but #{self.name} blocks for #{block}, resulting in #{@hitpoints = @hitpoints - damage + block} damage."
+	end
 end
 
 @weapon = ["nothing", "rusty dagger", "dagger", "sharp dagger", "rusty sword", "sword", "sharp sword", "rusty axe", "axe", "sharp axe"]
