@@ -29,4 +29,3 @@ until stop
     puts "Roll until you hit your point."
   end
 end
-
