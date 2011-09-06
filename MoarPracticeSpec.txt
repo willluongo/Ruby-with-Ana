@@ -1,0 +1,19 @@
+Create a method called average that takes two arguments. The method should find the average between the two numbers provided and return it.
+
+Create a method called greet that takes a single string as an argument. The method should put a message on the screen that says "Hello, (name passed as argument). how are you today?"
+
+Create an object class called fighter. Have the fighter take the following arguments: Name, hitpoints, high attack, low attack, block, and defend. 
+
+The fighter should have the following methods:
+
+A high attack method which takes a single argument, its target. When called the method passes a random number from 0 through high attack to the target's defend method. Display a message indicating what was hit, what hit it, and how much damage was done.
+
+A low attack method which takes a single argument, its target. When called the method passes a random number from 0 through low attack to the target's defend method.  Display a message indicating what was hit, what hit it, and how much damage was done.
+
+The defend method which takes a single argument, damage. When called, the defend method selects a random number from 0 through block. It then returns the amount of damage minus the random number picked as long as that number is 0 or greater. Display a message indicating how much damage was blocked. If hitpoints fall below 1, call the die method.
+
+The die method should display a clever death message giving the name of the attacker and how it killed the defender.
+
+
+
+Create a method that takes two fighter classes, and makes them fight until one dies. 
