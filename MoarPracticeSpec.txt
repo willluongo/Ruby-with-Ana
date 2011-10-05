@@ -12,8 +12,6 @@ A low attack method which takes a single argument, its target. When called the m
 
 The defend method which takes a single argument, damage. When called, the defend method selects a random number from 0 through block. It then returns the amount of damage minus the random number picked as long as that number is 0 or greater. Display a message indicating how much damage was blocked. If hitpoints fall below 1, call the die method.
 
-The die method should display a clever death message giving the name of the attacker and how it killed the defender.
-
-
+The death method should display a clever death message giving the name of the attacker and how it killed the defender.
 
 Create a method that takes two fighter classes, and makes them fight until one dies. 
