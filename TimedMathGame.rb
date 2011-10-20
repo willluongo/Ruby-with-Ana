@@ -24,7 +24,7 @@ if __FILE__ == $0
       if timer.passed >= time_limit
         puts "\nSorry, you've run out of time."
         puts "You got #{correct} correct, and #{incorrect} incorrect."
-        puts "Your final grade is #{(((correct+incorrect).to_f/correct)*100).round}%"
+        puts "Your final grade is #{((correct/(correct+incorrect).to_f)*100).round}%"
         exit
       end
     end
@@ -43,5 +43,4 @@ if __FILE__ == $0
       puts "I'm sorry, the correct answer was #{num1 + num2}."
     end
   end
-  
 end
