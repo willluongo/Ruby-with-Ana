@@ -11,9 +11,20 @@ class Timer
     (DateTime.now - @start_time).to_f * 24 * 60 * 60 
   end
 end
+
+def add_gen(num1, num2)
+  puts "What is #{num1} + #{num2}?"
+  return num1 + num2
+end
+
+def sub_gen(num1, num2)
+  puts "What is #{num1} - #{num2}?"
+  return num1 - num2
+end
     
 if __FILE__ == $0
-  time_limit = 60.0
+  puts "How long in seconds are you going to practice math today?"
+  time_limit = gets.chomp.to_f
   correct = 0
   incorrect = 0
   timer = Timer.new
@@ -29,18 +40,23 @@ if __FILE__ == $0
       end
     end
   }
-  while timer.passed < time_limit
+  
+  while timer.passed < time_limit + 1
     puts "\n\n\nYou have #{(time_limit - timer.passed).round} seconds left."
     num1 = rand(50)
     num2 = rand(50)
-    puts "What is #{num1} + #{num2}?"
+    if rand(2) == 1
+      answer = add_gen(num1, num2)
+    else
+      answer = sub_gen(num1, num2)
+    end
     input = gets.chomp.to_i
-    if input == num1 + num2
+    if input == answer
       correct += 1
       puts "#{input} is correct!"
     else
       incorrect += 1
-      puts "I'm sorry, the correct answer was #{num1 + num2}."
+      puts "I'm sorry, the correct answer was #{answer}."
     end
   end
 end
