@@ -27,6 +27,7 @@ if __FILE__ == $0
   time_limit = gets.chomp.to_f
   correct = 0
   incorrect = 0
+  number_limit = 11
   timer = Timer.new
   interrupt = false
   
@@ -43,8 +44,8 @@ if __FILE__ == $0
   
   while timer.passed < time_limit + 1
     puts "\n\n\nYou have #{(time_limit - timer.passed).round} seconds left."
-    num1 = rand(50)
-    num2 = rand(50)
+    num1 = rand(number_limit)
+    num2 = rand(number_limit)
     if rand(2) == 1
       answer = add_gen(num1, num2)
     else
@@ -54,6 +55,7 @@ if __FILE__ == $0
     if input == answer
       correct += 1
       puts "#{input} is correct!"
+      number_limit += 2
     else
       incorrect += 1
       puts "I'm sorry, the correct answer was #{answer}."
