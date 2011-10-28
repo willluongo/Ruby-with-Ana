@@ -18,7 +18,7 @@ I told her that I needed a function that would pick two random numbers, and then
 
 12/5/2010: Today we fleshed out the mathgame a bit more, and added some functionality. I helped her with the division (using a modulus operator to make sure no remainders will be required) and the subtraction (she was trying to use a series of conditionals to make the second number smaller). She is becoming fairly comfortable with the idea of methods/functions and conditionals.
 
-
+We've still been working! Details to come.
 
 Not that anything here will be likely of use, but here is the license anyway:
 
