@@ -23,6 +23,8 @@ def sub_gen(num1, num2)
 end
     
 if __FILE__ == $0
+  puts "Greetings traveler, what is your name?"
+  player_name = gets.chomp
   puts "How long in seconds are you going to practice math today?"
   time_limit = gets.chomp.to_f
   correct = 0
@@ -36,13 +38,28 @@ if __FILE__ == $0
       if timer.passed >= time_limit
         puts "\nSorry, you've run out of time."
         puts "You got #{correct} correct, and #{incorrect} incorrect."
-        puts "Your final grade is #{((correct/(correct+incorrect).to_f)*100).round}%"
+        final_grade = ((correct/(correct+incorrect).to_f)*100).round
+        right_now = DateTime.now
+        this_day = right_now.strftime(fmt='%Y%m%d')
+        puts "Your final grade is #{final_grade}%"
+        player_file = "./#{player_name}-#{this_day}.txt"
+        puts player_file
+        puts "Hi."
+        if File.exists?(player_file)
+          file = File.open(player_file, "w")
+          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
+          file.close
+        else
+          file = File.new(player_file, "w")
+          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
+          file.close
+        end
         exit
       end
     end
   }
   
-  while timer.passed < time_limit + 1
+  while timer.passed < time_limit
     puts "\n\n\nYou have #{(time_limit - timer.passed).round} seconds left."
     num1 = rand(number_limit)
     num2 = rand(number_limit)
