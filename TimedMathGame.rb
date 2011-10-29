@@ -36,6 +36,7 @@ if __FILE__ == $0
   Thread.new {
     while true
       if timer.passed >= time_limit
+        interrupt = true
         puts "\nSorry, you've run out of time."
         puts "You got #{correct} correct, and #{incorrect} incorrect."
         final_grade = ((correct/(correct+incorrect).to_f)*100).round
@@ -43,8 +44,6 @@ if __FILE__ == $0
         this_day = right_now.strftime(fmt='%Y%m%d')
         puts "Your final grade is #{final_grade}%"
         player_file = "./#{player_name}-#{this_day}.txt"
-        puts player_file
-        puts "Hi."
         if File.exists?(player_file)
           file = File.open(player_file, "w")
           file.puts("#{right_now.strftime(fmt='%T')}  #{player_name} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
@@ -59,7 +58,7 @@ if __FILE__ == $0
     end
   }
   
-  while timer.passed < time_limit
+  until interrupt
     puts "\n\n\nYou have #{(time_limit - timer.passed).round} seconds left."
     num1 = rand(number_limit)
     num2 = rand(number_limit)
