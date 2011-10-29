@@ -43,7 +43,7 @@ if __FILE__ == $0
         right_now = DateTime.now
         this_day = right_now.strftime(fmt='%Y%m%d')
         puts "Your final grade is #{final_grade}%"
-        player_file = "./#{player_name}-#{this_day}.txt"
+        player_file = "./#{player_name.downcase}-#{this_day}.txt"
         if File.exists?(player_file)
           file = File.open(player_file, "w")
           file.puts("#{right_now.strftime(fmt='%T')}  #{player_name} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
