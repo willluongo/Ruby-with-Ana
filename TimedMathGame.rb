@@ -45,12 +45,12 @@ if __FILE__ == $0
         puts "Your final grade is #{final_grade}%"
         player_file = "./#{player_name.downcase}-#{this_day}.txt"
         if File.exists?(player_file)
-          file = File.open(player_file, "w")
-          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
+          file = File.open(player_file, "a")
+          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name.downcase} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
           file.close
         else
           file = File.new(player_file, "w")
-          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
+          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name.downcase} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
           file.close
         end
         exit
