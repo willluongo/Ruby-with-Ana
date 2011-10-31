@@ -23,8 +23,22 @@ def sub_gen(num1, num2)
 end
     
 if __FILE__ == $0
+  Thread.abort_on_exception = true
   puts "Greetings traveler, what is your name?"
   player_name = gets.chomp
+  
+  right_now = DateTime.now
+  this_day = right_now.strftime(fmt='%Y%m%d')
+  player_file = "./#{player_name.downcase}-#{this_day}.txt"
+  
+        
+  if File.exists?(player_file)
+    file = File.open(player_file, "a+")
+  else
+    file = File.new(player_file, "w+")
+  end
+  puts "You've practiced #{file.readlines.length} times today."
+  
   puts "How long in seconds are you going to practice math today?"
   time_limit = gets.chomp.to_f
   correct = 0
@@ -40,19 +54,9 @@ if __FILE__ == $0
         puts "\nSorry, you've run out of time."
         puts "You got #{correct} correct, and #{incorrect} incorrect."
         final_grade = ((correct/(correct+incorrect).to_f)*100).round
-        right_now = DateTime.now
-        this_day = right_now.strftime(fmt='%Y%m%d')
         puts "Your final grade is #{final_grade}%"
-        player_file = "./#{player_name.downcase}-#{this_day}.txt"
-        if File.exists?(player_file)
-          file = File.open(player_file, "a")
-          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name.downcase} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
-          file.close
-        else
-          file = File.new(player_file, "w")
-          file.puts("#{right_now.strftime(fmt='%T')}  #{player_name.downcase} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
-          file.close
-        end
+        file.puts("#{right_now.strftime(fmt='%T')}  #{player_name.downcase} got #{correct} out of #{correct + incorrect}, for a grade of #{final_grade}%.")
+        file.close
         exit
       end
     end
