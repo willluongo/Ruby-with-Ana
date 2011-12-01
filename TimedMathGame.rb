@@ -23,6 +23,7 @@ def sub_gen(num1, num2)
 end
 
 def div_gen(num1, num2)
+	num2 = num2 + 1
 	puts "What is #{num1 * num2} divided by #{num2}?"
 	return num1
 end
